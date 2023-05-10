@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
+
+
+
+
+
+</head>
+<body>
+     <h1>colorpicker by yaparala harsha vardhan</h1>
+<h1>colorcode <span id="code-display"></span></h1>
+<button id="btn">cilck to generate color code </button>
+
+
+
+
+
+
+
+
+<script>
+let code_display = document.getElementById("code-display")
+let bodyElement = document.querySelector("body")
+let btnElement = document.getElementById("btn")
+btnElement.addEventListener("click" , function(){
+    let hexcode ="#"
+    let colorchars = "0123456789abcdef"
+    for(let i=0;i<6;i++) {
+        let random_num = Math.trunc(Math.random()*16)
+        hexcode += colorchars[random_num]
+        bodyElement.style.backgroundColor = hexcode
+        code_display.innerText = hexcode
+        
+    }
+
+
+})                           
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
